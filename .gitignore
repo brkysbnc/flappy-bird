@@ -1,0 +1,22 @@
+# Build artifacts
+**/bin/
+**/obj/
+**/out/
+
+# VS/VSCode
+.vs/
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.swp
+
+# Logs
+*.log
+
+# Publish output
+build-client/
+
+# OS
+*.DS_Store
+Thumbs.db
