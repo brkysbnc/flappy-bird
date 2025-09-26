@@ -25,13 +25,27 @@ jobs:
           dotnet-version: '8.0.x'
       - name: Install WASM tools
         run: dotnet workload install wasm-tools --ignore-failed-sources
-      - name: Publish WASM (restore+build+publish)
-        run: dotnet publish ./FlappyBÖRD/FlappyBÖRD.Client/FlappyBÖRD.Client.csproj -c Release -o ./build-client /p:BlazorEnableCompression=true
-      - name: Prepare artifact
+      - name: Locate Client project
+        id: locate
+        shell: bash
         run: |
-          mkdir -p build-client/wwwroot
-          touch build-client/wwwroot/.nojekyll
-      - name: Setup Pages
+          set -e
+          CLIENT=$(git ls-files | grep -iE 'Client\.csproj$' | head -n1)
+          [ -n "$CLIENT" ] || { echo "No *Client.csproj found"; exit 1; }
+          echo "client_csproj=$CLIENT" >> $GITHUB_OUTPUT
+          echo "Client: $CLIENT"
+      - name: Restore (repo)
+        run: dotnet restore
+      - name: Publish WASM
+        shell: bash
+        run: |
+          set -e
+          CLIENT="${{ steps.locate.outputs.client_csproj }}"
+          OUTDIR="build-client"
+          dotnet publish "$CLIENT" -c Release -o "$OUTDIR" /p:BlazorEnableCompression=true -v minimal
+          mkdir -p "$OUTDIR/wwwroot"
+          touch "$OUTDIR/wwwroot/.nojekyll"
+      - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
