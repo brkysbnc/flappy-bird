@@ -1,3 +1,4 @@
+# trigger deploy
 name: Deploy FlappyBÖRD.Client to GitHub Pages
 
 on:
