@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "görev-FlappyBÖRD",
+      "appliesTo": "FlappyBÖRD/FlappyBÖRD.Client/",
+      "type": "launch"
+    }
+  ]
+}

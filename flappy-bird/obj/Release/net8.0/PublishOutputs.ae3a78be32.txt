@@ -1,0 +1,2 @@
+C:\Users\berka\source\repos\flappy-bird\publish\emcc-props.json
+C:\Users\berka\source\repos\flappy-bird\publish\web.config
