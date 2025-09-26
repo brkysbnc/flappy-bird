@@ -1,6 +1,4 @@
-# trigger deploy
 name: Deploy FlappyBÖRD.Client to GitHub Pages
-
 on:
   push:
     branches: [ main ]
@@ -17,25 +15,29 @@ concurrency:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup .NET
+      - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
-
-      - name: Restore
-        run: dotnet restore "FlappyBÖRD/FlappyBÖRD.Client/FlappyBÖRD.Client.csproj"
-
-      - name: Publish WASM
-        run: dotnet publish "FlappyBÖRD/FlappyBÖRD.Client/FlappyBÖRD.Client.csproj" -c Release -o build-client /p:BlazorEnableCompression=true
-
+      - name: Install WASM tools
+        run: dotnet workload install wasm-tools --ignore-failed-sources
+      - name: Dotnet info
+        run: dotnet --info
+      - name: Restore solution
+        run: dotnet restore "FlappyBÖRD/FlappyBÖRD.sln"
+      - name: Publish WASM (Client)
+        working-directory: FlappyBÖRD/FlappyBÖRD.Client
+        run: dotnet publish FlappyBÖRD.Client.csproj -c Release -o ../../build-client /p:BlazorEnableCompression=true
       - name: Create .nojekyll
-        run: New-Item -ItemType File -Path build-client/wwwroot/.nojekyll -Force | Out-Null
-
+        run: |
+          mkdir -p build-client/wwwroot
+          touch build-client/wwwroot/.nojekyll
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -51,5 +53,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-
