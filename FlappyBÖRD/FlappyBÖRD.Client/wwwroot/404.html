@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=./" />
+    <script>
+      // SPA routing fallback for GitHub Pages
+      (function() {
+        var l = window.location;
+        var base = document.querySelector('base');
+        var baseHref = base ? base.getAttribute('href') : '/';
+        var target = baseHref + '?' + 'p=' + encodeURIComponent(l.pathname + l.search + l.hash);
+        l.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    Yönlendiriliyor...
+  </body>
+  </html>
+
+

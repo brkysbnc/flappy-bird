@@ -1,0 +1,54 @@
+name: Deploy FlappyBÖRD.Client to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore "FlappyBÖRD/FlappyBÖRD.Client/FlappyBÖRD.Client.csproj"
+
+      - name: Publish WASM
+        run: dotnet publish "FlappyBÖRD/FlappyBÖRD.Client/FlappyBÖRD.Client.csproj" -c Release -o build-client /p:BlazorEnableCompression=true
+
+      - name: Create .nojekyll
+        run: New-Item -ItemType File -Path build-client/wwwroot/.nojekyll -Force | Out-Null
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build-client/wwwroot
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+
