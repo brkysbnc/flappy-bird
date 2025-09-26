@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "FlappyBÖRD.Client",
   "resources": {
-    "hash": "sha256-kpAxqoeYwP8BYvrDlmshfwEV6Rg56w5wgHWYl6bNBow=",
+    "hash": "sha256-yc/Fr+ptYB3QzPMaU9anh0gq27qmK85Ji4FNw648zRM=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-D0bzod5lwwSzPR43JC8TTCcZKw+3jIHOk8CZFCRj5is="
     },
@@ -147,7 +147,7 @@
       "System.wasm": "sha256-9DLmgOsnmEbjuZrRVFruRmVRvh/skjCDv6hQMjVZ3K8=",
       "netstandard.wasm": "sha256-EVdI8BdKwqKbkO0nGSmR5vPl+IzRVdOBVkjFlTM5v1o=",
       "System.Private.CoreLib.wasm": "sha256-u/LIxzHFLy9KHoGa/g0J9Sr1ZZVbNacvXv7TAjONxu0=",
-      "FlappyBÖRD.Client.wasm": "sha256-dCvuU5qibZ/mXElBTLS0v6guYa3/zMK3O3Ic0PQtQKE="
+      "FlappyBÖRD.Client.wasm": "sha256-JaA+69Rj1PV6s0ElswAVfV0fpiRgIRdpuSyrUvGa2Pw="
     },
     "satelliteResources": {
       "cs": {
