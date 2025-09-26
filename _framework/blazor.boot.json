@@ -318,10 +318,7 @@
   },
   "cacheBootResources": true,
   "debugLevel": -1,
-  "appsettings": [
-    "../appsettings.Development.json",
-    "../appsettings.json"
-  ],
+  "appsettings": [],
   "globalizationMode": "sharded",
   "extensions": {
     "blazor": {}
