@@ -34,6 +34,13 @@ jobs:
           [ -n "$CLIENT" ] || { echo "No *Client.csproj found"; exit 1; }
           echo "client_csproj=$CLIENT" >> $GITHUB_OUTPUT
           echo "Client: $CLIENT"
+      - name: Configure DevExpress NuGet feed
+        run: |
+          set -e
+          dotnet nuget remove source DevExpress || true
+          dotnet nuget add source "https://nuget.devexpress.com/${DX_NUGET_KEY}/api" --name DevExpress
+        env:
+          DX_NUGET_KEY: ${{ secrets.DX_NUGET_KEY }}
       - name: Restore (repo)
         run: dotnet restore
       - name: Publish WASM
