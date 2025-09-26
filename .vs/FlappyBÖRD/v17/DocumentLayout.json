@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\berka\\source\\repos\\FlappyB\u00D6RD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B5D011E4-010E-4E43-A122-C791AE23E7FF}|FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\FlappyB\u00D6RD.Client.csproj|c:\\users\\berka\\source\\repos\\flappyb\u00F6rd\\flappyb\u00F6rd\\flappyb\u00F6rd.client\\pages\\game.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5D011E4-010E-4E43-A122-C791AE23E7FF}|FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\FlappyB\u00D6RD.Client.csproj|solutionrelative:flappyb\u00F6rd\\flappyb\u00F6rd.client\\pages\\game.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5D011E4-010E-4E43-A122-C791AE23E7FF}|FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\FlappyB\u00D6RD.Client.csproj|c:\\users\\berka\\source\\repos\\flappyb\u00F6rd\\flappyb\u00F6rd\\flappyb\u00F6rd.client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5D011E4-010E-4E43-A122-C791AE23E7FF}|FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\FlappyB\u00D6RD.Client.csproj|solutionrelative:flappyb\u00F6rd\\flappyb\u00F6rd.client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.razor",
+              "DocumentMoniker": "C:\\Users\\berka\\source\\repos\\FlappyB\u00D6RD\\FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\Pages\\Game.razor",
+              "RelativeDocumentMoniker": "FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\Pages\\Game.razor",
+              "ToolTip": "C:\\Users\\berka\\source\\repos\\FlappyB\u00D6RD\\FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\Pages\\Game.razor",
+              "RelativeToolTip": "FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\Pages\\Game.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T17:38:46.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\berka\\source\\repos\\FlappyB\u00D6RD\\FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\_Imports.razor",
+              "RelativeDocumentMoniker": "FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\_Imports.razor",
+              "ToolTip": "C:\\Users\\berka\\source\\repos\\FlappyB\u00D6RD\\FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\_Imports.razor",
+              "RelativeToolTip": "FlappyB\u00D6RD\\FlappyB\u00D6RD.Client\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T17:38:51.493Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

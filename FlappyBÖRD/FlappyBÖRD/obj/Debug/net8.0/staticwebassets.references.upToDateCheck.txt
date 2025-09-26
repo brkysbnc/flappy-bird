@@ -1,0 +1,4 @@
+C:\Users\berka\source\repos\FlappyBÖRD\FlappyBÖRD\FlappyBÖRD.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\berka\source\repos\FlappyBÖRD\FlappyBÖRD\FlappyBÖRD.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\berka\source\repos\FlappyBÖRD\FlappyBÖRD\FlappyBÖRD.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\berka\source\repos\FlappyBÖRD\FlappyBÖRD\FlappyBÖRD.Client\obj\Debug\net8.0\staticwebassets.build.json
