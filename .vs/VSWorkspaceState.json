@@ -3,8 +3,9 @@
     "",
     "\\FlappyBÖRD",
     "\\FlappyBÖRD\\FlappyBÖRD",
-    "\\FlappyBÖRD\\FlappyBÖRD.Client"
+    "\\FlappyBÖRD\\FlappyBÖRD.Client",
+    "\\FlappyBÖRD\\FlappyBÖRD.Client\\bin\\Debug"
   ],
-  "SelectedNode": "\\_framework",
+  "SelectedNode": "\\flappy-bird",
   "PreviewInSolutionExplorer": false
 }
